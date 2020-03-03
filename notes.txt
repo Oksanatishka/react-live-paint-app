@@ -1,0 +1,38 @@
+Resources:
+- https://codeburst.io/build-a-live-paint-application-with-react-ed534b403706
+- https://github.com/christiannwamba/react-paintapp
+
+We’ll be using these four tools to build our application:
+1) Express
+2) Node
+3) Pusher
+4) React
+
+> npx create-react-app react-live-paint-app
+
+> npm install express body-parser dotenv pusher     // install depencies required to build the server
+> npm install pusher-js uuid    // front-end dependencies
+> npm start     // open on http://localhost:3000. 
+
+$$ BUILDING OUR SERVER
+- Create server.js
+- Create a Pusher account and a new Pusher Channels app if you haven’t done so yet and get your appId, keyand secret.
+- Create .env
+> node server   // Start the server 
+
+$$ DRAW ROUTE
+- Create a post route named draw in server.js
+
+$$ CANVAS COMPONENT
+- Create /src/canvas.js
+- Add the canvas element to the App.js
+- Add styles to the App.css
+- Include a link to the stylesheet with external font in the /public/index.html
+> npm start
+
+$$ INTRODUCING PUSHER AND REALTIME PAINTING
+- Open canvas.js, import the Pusher library into it, initialize it in the constructor and listen for events.
+
+$$ TEST APPLICATION
+Open two browsers side by side to observe the realtime functionality of the application. A line drawn on one browser should show up on the other.
+Note: Ensure both the server and the dev server are up by running npm start and node server on separate terminal sessions.
